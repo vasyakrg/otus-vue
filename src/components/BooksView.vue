@@ -7,10 +7,15 @@
 
 <script setup>
 import { ref } from 'vue'
+import axios from 'axios'
 import BookList from './BooksList.vue'
-const books = ref([
-	{ id: 1, title: 'The Wheel of Time' },
-	{ id: 2, title: 'The Way of Kings' },
-	{ id: 3, title: 'Dune' },
-]);
+
+let books = ref()
+
+axios.get('https://fakestoreapi.com/products')
+	.then(response => {
+		// console.log(response)
+	 	books.value =  response.data
+	})
+
 </script>
