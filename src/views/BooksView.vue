@@ -8,7 +8,7 @@
 <script setup>
 import { ref } from 'vue'
 import axios from 'axios'
-import BookList from './BooksList.vue'
+import BookList from '@/components/BooksList.vue'
 
 let books = ref()
 

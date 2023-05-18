@@ -1,5 +1,5 @@
 <script setup>
-import BookView from './components/BooksView.vue'
+import BookView from './views/BooksView.vue'
 </script>
 
 <template>
