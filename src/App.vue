@@ -1,10 +1,10 @@
 <script setup>
-import BookView from './views/BooksView.vue'
+import Books from './views/Books.vue'
 </script>
 
 <template>
   <div>
-    <BookView/>
+    <Books/>
   </div>
 </template>
 

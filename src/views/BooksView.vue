@@ -1,5 +1,4 @@
 <template>
-	<h1>Books</h1>
 	<ul>
 		<BookList :books="books"/>
 	</ul>
@@ -7,15 +6,10 @@
 
 <script setup>
 import { ref } from 'vue'
-import axios from 'axios'
+import bookData from '@/http.ts'
 import BookList from '@/components/BooksList.vue'
 
 let books = ref()
 
-axios.get('https://fakestoreapi.com/products')
-	.then(response => {
-		// console.log(response)
-	 	books.value =  response.data
-	})
-
+books.value = bookData
 </script>
